@@ -48,6 +48,7 @@ go build -ldflags "-linkmode external -extldflags -static"
 ## TODO
 
 + Add support for extrating qr data from video via V4L2
++ Add support for other image types
 
 
 
