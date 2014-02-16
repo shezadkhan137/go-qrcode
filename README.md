@@ -40,7 +40,7 @@ func main() {
 
 ## Building
 
-Building a staticlly linked binary with cgo dependencies can be a little fragile, by default cgo libraries are dynamically linked so require the libzbar-dev do be present on machine running your binary. However the following commandmay work if you want to statically link the zbar libs into your go binary.
+Building a staticlly linked binary with cgo dependencies can be a little fragile, by default cgo libraries are dynamically linked so require the libzbar-dev to be present on machine running your binary. However the following command may work if you want to statically link the zbar libs into your go binary.
 ```
 go build -ldflags "-linkmode external -extldflags -static"
 ```
