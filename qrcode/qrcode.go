@@ -15,11 +15,11 @@ import (
 )
 
 type Result struct {
-	symbolType string
-	data       string
+	SymbolType string
+	Data       string
 }
 
-func GetDataFromPng(pngPath string) (results []Result, err error) {
+func GetDataFromPNG(pngPath string) (results []Result, err error) {
 
 	pth := C.CString(pngPath)
 	scanner := C.zbar_image_scanner_create()

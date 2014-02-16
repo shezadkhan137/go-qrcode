@@ -6,9 +6,9 @@ import (
 	"github.com/shezadkhan137/go-qrcode/qrcode"
 )
 
-//go build -o test -ldflags "-linkmode external -extldflags -static"
 var image *string
 
+//go build -o test -ldflags "-linkmode external -extldflags -static"
 func init() {
 	image = flag.String("i", "", "image path")
 }
@@ -17,9 +17,11 @@ func main() {
 
 	flag.Parse()
 
-	results, err := qrcode.GetDataFromPng(*image)
+	results, err := qrcode.GetDataFromPNG(*image)
 	if err != nil {
 		panic(err)
 	}
-	fmt.Printf("%+v\n", results)
+	for _, result := range results {
+		fmt.Printf("Symbol Type: %s, Data %s", result.SymbolType, result.Data)
+	}
 }
