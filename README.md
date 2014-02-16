@@ -5,7 +5,7 @@ A (very) light golang convenience wrapper around [zbar](http://zbar.sourceforge.
 
 ## Requirements 
 
-To compile this package requires the zbar header files which can be installed on linux with
+To compile this package requires the zbar header files which can be installed on debian/ubuntu with
 ```
 sudo apt-get install libzbar-dev
 ```
